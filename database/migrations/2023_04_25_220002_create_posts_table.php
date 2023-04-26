@@ -7,17 +7,17 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
+        //! Image is Postponed
+        
     public function up(): void
     {
         Schema::create('posts', function (Blueprint $table) {
-            $table->id();
+            $table->id()->unsigned();
+            $table->unsignedBigInteger('category_id');
             $table->string('title');
             $table->text('text');
-            $table->unsignedBigInteger('category_id');
-            
+            // $table->string('image')->default('default.png');
+            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
             $table->timestamps();
         });
     }

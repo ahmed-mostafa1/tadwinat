@@ -2,9 +2,10 @@
 @section('title', ' الرئيسية')
 
 @section('content')
-    
-
 <div class="post">
+{{-- Content is Added Here --}}
+
+
   <div class="post-image">
       <p>post image</p>
   </div>
@@ -22,7 +23,9 @@
       </p>
       <a href="#"><button class="btn btn-custom">إقرأ المزيد</button></a>
   </div>
-</div>
 
+
+
+</div> <!-- End of Content -->
 @endsection
 
